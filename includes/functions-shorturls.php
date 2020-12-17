@@ -302,6 +302,7 @@ function yourls_edit_link( $url, $keyword, $newkeyword='', $title='' ) {
     global $ydb;
 
     $table = YOURLS_DB_TABLE_URL;
+    $url = yourls_encodeURI( $url );
     $url = yourls_sanitize_url($url);
     $keyword = yourls_sanitize_keyword($keyword);
     $title = yourls_sanitize_title($title);
